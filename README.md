@@ -1,4 +1,4 @@
-# Expense Tracker Pro 💰
+# Expense Tracker 💰
 
 A simple yet powerful Command-Line Interface (CLI) application built in Java to help you track, manage, and budget your daily expenses effectively.
 
