@@ -1,6 +1,4 @@
-target/
-*.jar
-*.class
+
 .idea/
 *.iml
 .vscode/
