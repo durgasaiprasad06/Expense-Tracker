@@ -88,5 +88,3 @@ This project includes a fully functional GitHub Actions workflow (`.github/workf
 5. Build the Docker image.
 6. Scan the Docker image for vulnerabilities using Trivy.
 
-## 📝 License
-This project is open-source and available under the MIT License.
