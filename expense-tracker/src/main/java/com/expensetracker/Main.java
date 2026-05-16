@@ -9,7 +9,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ExpenseManager manager = new ExpenseManager();
 
-        while (true) {
+        boolean running = true;
+        while (running) {
             System.out.println("\n===== Expense Tracker Menu =====");
             System.out.println("1. Record an expense");
             System.out.println("2. View expense summary");
@@ -23,23 +24,42 @@ public class Main {
             System.out.print("Enter your choice: ");
 
             int choice = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine(); 
 
             switch (choice) {
-                case 1 -> manager.recordExpense();
-                case 2 -> manager.showSummary();
-                case 3 -> manager.setBudget();
-                case 4 -> manager.viewBudget();
-                case 5 -> manager.showHistory();
-                case 6 -> manager.convertCurrency();
-                case 7 -> manager.saveExpenses();
-                case 8 -> manager.loadExpenses();
-                case 9 -> {
+                case 1:
+                    manager.recordExpense();
+                    break;
+                case 2:
+                    manager.showSummary();
+                    break;
+                case 3:
+                    manager.setBudget();
+                    break;
+                case 4:
+                    manager.viewBudget();
+                    break;
+                case 5:
+                    manager.showHistory();
+                    break;
+                case 6:
+                    manager.convertCurrency();
+                    break;
+                case 7:
+                    manager.saveExpenses();
+                    break;
+                case 8:
+                    manager.loadExpenses();
+                    break;
+                case 9:
                     System.out.println("Exiting...");
-                    System.exit(0);
-                }
-                default -> System.out.println("Invalid choice");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice");
             }
         }
+        sc.close();
     }
+
 }

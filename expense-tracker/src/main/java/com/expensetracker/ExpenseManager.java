@@ -83,24 +83,35 @@ public class ExpenseManager {
     private double convert(double amount, String from, String to) {
         double usdRate = 82.0;
         double eurRate = 90.0;
-        double amtInINR = switch (from) {
-            case "INR" -> amount;
-            case "USD" -> amount * usdRate;
-            case "EUR" -> amount * eurRate;
-            default -> {
+        double amtInINR;
+        
+        switch (from) {
+            case "INR":
+                amtInINR = amount;
+                break;
+            case "USD":
+                amtInINR = amount * usdRate;
+                break;
+            case "EUR":
+                amtInINR = amount * eurRate;
+                break;
+            default:
                 System.out.println("Invalid from currency. Using INR.");
-                yield amount;
-            }
-        };
-        return switch (to) {
-            case "INR" -> amtInINR;
-            case "USD" -> amtInINR / usdRate;
-            case "EUR" -> amtInINR / eurRate;
-            default -> {
+                amtInINR = amount;
+                break;
+        }
+        
+        switch (to) {
+            case "INR":
+                return amtInINR;
+            case "USD":
+                return amtInINR / usdRate;
+            case "EUR":
+                return amtInINR / eurRate;
+            default:
                 System.out.println("Invalid to currency. Returning original.");
-                yield amount;
-            }
-        };
+                return amount;
+        }
     }
 
     // --- Option 7: Save expenses ---
