@@ -35,20 +35,6 @@ Navigate through the interactive menu by entering the corresponding numbers:
 8.  **Load expenses**: Restore data from `expenses.txt`.
 9.  **Exit**: Safely close the application.
 
-## 📦 How to Build and Run Locally
-
-### 1. Build the Project
-Open a terminal and navigate to the project directory, then run the following Maven command:
-```bash
-mvn clean package
-```
-This will compile the project and package the application into an executable JAR file in the `target/` directory.
-
-### 2. Run the Application
-Execute the JAR file using Java:
-```bash
-java -jar target/expense-tracker-1.0-SNAPSHOT.jar
-```
 
 ## 🐳 Running with Docker
 
