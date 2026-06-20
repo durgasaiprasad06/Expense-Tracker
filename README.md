@@ -78,8 +78,10 @@ expense-tracker/
 ├── .github/workflows/          # CI/CD pipeline definition
 └── expenses.txt                # Data storage file
 ```
-## Store - CI/CD Pipline
+## STORE - CI/CD PIPELINE 
+
 <img width="1536" height="1024" alt="ChatGPT Image May 15, 2026, 01_45_07 AM" src="https://github.com/user-attachments/assets/c3c1218c-da44-47e0-ac8d-282ac89449b4" />
+
 
 ## 🔄 CI/CD Pipeline
 This project includes a fully functional GitHub Actions workflow (`.github/workflows/ci-cd.yml`). On every push or pull request to the `main` branch, it will automatically:
